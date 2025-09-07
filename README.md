@@ -50,8 +50,8 @@ classDiagram
 
     Biblioteca --> Repositorio
     RepositorioMemoria --> Repositorio
-
-Funcionalidades
+```
+## Funcionalidades
 
 Adicionar livros ao acervo da biblioteca.
 
@@ -61,13 +61,13 @@ Receber livros devolvidos.
 
 Consultar quais livros estão emprestados a um usuário específico.
 
-Tecnologias
+## Tecnologias
 
 Linguagem: Java
 
 Testes: JUnit 5
 
-Como usar
+## Como usar
 
 Criar uma instância do repositório, por exemplo, RepositorioMemoria.
 
@@ -77,7 +77,7 @@ Criar uma instância de Biblioteca passando a implementação do Repositorio.
 
 Usar os métodos da biblioteca para adicionar livros, emprestar e receber livros.
 
-Exemplo de uso
+## Exemplo de uso
 Repositorio repo = new RepositorioMemoria();
 Biblioteca biblioteca = new Biblioteca(repo);
 
@@ -95,7 +95,7 @@ try {
 List<Livro> livrosDoUsuario = biblioteca.livrosEmprestadosUsuario(usuario);
 biblioteca.receberLivroEmprestado(livro);
 
-Testes com JUnit 5
+## Testes com JUnit 5
 
 O projeto inclui testes unitários e testes de integração com JUnit 5.
 
@@ -107,7 +107,7 @@ Garantem que tentar emprestar um livro já emprestado lance ExcecaoLivroEmpresta
 
 Cobrem cenários de integração completa, incluindo múltiplos usuários e fluxo de empréstimos/devoluções.
 
-Exemplo de teste unitário
+ ### Exemplo de teste unitário
 @Test
 void testaEmprestarLivroJaEmprestado() throws ExcecaoLivroEmprestado {
     bib.emprestarLivro(livro1, usuario1);
@@ -117,7 +117,7 @@ void testaEmprestarLivroJaEmprestado() throws ExcecaoLivroEmprestado {
     });
 }
 
-Exemplo de teste de integração
+### Exemplo de teste de integração
 @Test
 void integracaoFluxoCompleto() throws ExcecaoLivroEmprestado {
     bib.emprestarLivro(livro1, usuario1);
